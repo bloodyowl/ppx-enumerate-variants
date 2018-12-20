@@ -8,7 +8,8 @@
   },
   "scripts": {
     "start": "bsb -w",
-    "run-bin": "./lib/bs/native/ppx_enumerate_variants"
+    "run-bin": "./lib/bs/native/ppx_enumerate_variants",
+    "test": "ocamlfind ppx_tools/rewriter ./lib/bs/native/ppx_enumerate_variants test/test.ml"
   },
   "devDependencies": {
     "bsb-native": "^4.0.7000"

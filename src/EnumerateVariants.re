@@ -64,7 +64,22 @@ let rec structureMapper = (mapper, structure: structure) =>
                         txt: txt ++ "All",
                       }),
                     ),
-                    Ast_helper.Typ.mk(Ptyp_var(txt)),
+                    Ast_helper.Typ.mk(
+                      Ptyp_constr(
+                        {txt: Lident("array"), loc: Ast_helper.default_loc^},
+                        [
+                          Ast_helper.Typ.mk(
+                            Ptyp_constr(
+                              {
+                                txt: Lident(txt),
+                                loc: Ast_helper.default_loc^,
+                              },
+                              [],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
                 ),
               pvb_expr:
