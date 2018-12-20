@@ -1,0 +1,16 @@
+{
+  "name": "ppx-enumerate-variants",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "bin": {
+    "ppx_enumerate_variants": "./lib/bs/native/ppx_enumerate_variants"
+  },
+  "scripts": {
+    "start": "bsb -w",
+    "run-bin": "./lib/bs/native/ppx_enumerate_variants"
+  },
+  "devDependencies": {
+    "bsb-native": "^4.0.7000"
+  }
+}
