@@ -57,7 +57,15 @@ let rec structureMapper = (mapper, structure: structure) =>
             {
               pvb_pat:
                 Ast_helper.Pat.mk(
-                  Ppat_var({loc: Ast_helper.default_loc^, txt: txt ++ "All"}),
+                  Ppat_constraint(
+                    Ast_helper.Pat.mk(
+                      Ppat_var({
+                        loc: Ast_helper.default_loc^,
+                        txt: txt ++ "All",
+                      }),
+                    ),
+                    Ast_helper.Typ.mk(Ptyp_var(txt)),
+                  ),
                 ),
               pvb_expr:
                 Ast_helper.Exp.array(
