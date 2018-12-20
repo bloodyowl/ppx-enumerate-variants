@@ -99,10 +99,10 @@ let rec structureMapper = (mapper, structure: structure) =>
   | [other, ...tl] => [other, ...structureMapper(mapper, tl)]
   };
 
-let enumerate_variants_mapper = {
+let enumerate_variants_mapper = _argv => {
   ...default_mapper,
   structure: (mapper, structure) =>
     default_mapper.structure(mapper, structureMapper(mapper, structure)),
 };
 
-let () = register("ppx_enumerate_variants", _ => enumerate_variants_mapper);
+let () = Ast_mapper.run_main(enumerate_variants_mapper);

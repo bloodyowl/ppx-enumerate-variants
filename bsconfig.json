@@ -1,6 +1,8 @@
 {
   "name": "i18n-extractor",
   "version": "0.1.0",
+  "bsc-flags": "-g",
+  "ocaml-flags": ["-g", "-bin-annot"],
   "sources": {
     "dir": "src",
     "backend": ["native", "bytecode"],

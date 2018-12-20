@@ -1,0 +1,19 @@
+{
+  "name": "beopfrontend",
+  "reason": { "react-jsx": 2 },
+  "refmt": 3,
+  "sources": [{ "dir": "src", "subdirs": true }],
+  "package-specs": [
+    {
+      "module": "es6-global",
+      "in-source": true
+    }
+  ],
+  "suffix": ".bs.js",
+  "namespace": true,
+  "bsc-flags": ["-bs-super-errors"],
+  "ppx-flags": ["../../lib/bs/native/ppx_enumerate_variants"],
+  "warnings": {
+    "error": "+8"
+  }
+}
