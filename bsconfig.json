@@ -5,17 +5,15 @@
   "ocaml-flags": ["-g", "-bin-annot"],
   "sources": {
     "dir": "src",
-    "backend": ["native", "bytecode"],
-    "subdirs": true
+    "backend": ["native", "bytecode"]
   },
   "entries": [
     {
       "backend": "native",
-      "main-module": "EnumerateVariants",
-      "output-name": "ppx_enumerate_variants"
+      "main-module": "EnumerateVariants"
     }
   ],
-  "ocamlfind-dependencies": ["reason", "yojson"],
+  "ocaml-dependencies": ["compiler-libs", "unix", "bigarray", "str"],
   "warnings": {
     "error": "+101"
   },
