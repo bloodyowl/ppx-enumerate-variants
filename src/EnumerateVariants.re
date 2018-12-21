@@ -1,6 +1,7 @@
-open Asttypes;
-open Parsetree;
+open Ast_402;
 open Ast_mapper;
+open Parsetree;
+open Asttypes;
 
 let rec structureMapper = (mapper, structure: structure) =>
   switch (structure) {
@@ -105,4 +106,8 @@ let enumerate_variants_mapper = _argv => {
     default_mapper.structure(mapper, structureMapper(mapper, structure)),
 };
 
-let () = Ast_mapper.run_main(enumerate_variants_mapper);
+let () =
+  Migrate_parsetree.Compiler_libs.Ast_mapper.register(
+    "enumerate_variants", argv =>
+    enumerate_variants_mapper(argv)
+  );
