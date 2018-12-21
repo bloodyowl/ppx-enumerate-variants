@@ -10,7 +10,8 @@
   "entries": [
     {
       "backend": "native",
-      "main-module": "EnumerateVariants"
+      "main-module": "EnumerateVariants",
+      "output-name": "ppx"
     }
   ],
   "ocaml-dependencies": ["compiler-libs", "unix", "bigarray", "str"],
