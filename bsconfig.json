@@ -11,7 +11,7 @@
     {
       "backend": "native",
       "main-module": "EnumerateVariants",
-      "output-name": "ppx"
+      "output-name": "ppx_enumerate_variants"
     }
   ],
   "ocaml-dependencies": ["compiler-libs", "unix", "bigarray", "str"],
